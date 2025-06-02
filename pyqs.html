@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="style2.css">
+<title>PYQs - Student Hub</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+    }
+
+    header, footer {
+    text-align: center;
+    }
+
+    nav a {
+    margin: 0 10px;
+    }
+
+    table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    }
+
+    table, th, td {
+    border: 1px solid #aaa;
+    }
+
+    th, td {
+    padding: 10px;
+    text-align: left;
+    }
+
+    .dark-mode {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+    }
+
+    .dark-mode table, .dark-mode th, .dark-mode td {
+    border-color: #555;
+    }
+
+    #searchInput {
+    margin-top: 10px;
+    padding: 8px;
+    width: 50%;
+    font-size: 1rem;
+    }
+
+    .upload-section {
+    margin: 20px 0;
+    }
+
+    .toggle-button {
+    float: right;
+    padding: 8px 16px;
+    margin: 10px;
+    cursor: pointer;
+    }
+
+    .download-btn {
+    padding: 6px 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+
+    .download-btn:hover {
+    background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+<header>
+    <button class="toggle-button" onclick="toggleDarkMode()">Toggle Dark/Light Mode</button>
+    <h1>📄 Previous Year Question Papers (PYQs)</h1>
+    <nav>
+    <a href="index.html">Home</a> |
+    <a href="notes.html">Notes</a> |
+    <a href="pyps.html">PYPS</a> |
+    <a href="resources.html">Study Resources</a>
+    </nav>
+    <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search for subject or semester...">
+</header>
+
+<main>
+    <div class="upload-section">
+    <h3>Upload Your PYQs (Coming Soon)</h3>
+    <p><em>You’ll be able to upload PDFs or share Google Drive links here!</em></p>
+    </div>
+
+    <table id="pyqTable">
+    <thead>
+        <tr>
+        <th>Semester</th>
+        <th>Subject</th>
+        <th>Download</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Semester 1 -->
+        <tr><td>Semester 1</td><td>Mathematics-I</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 1</td><td>Physics</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 1</td><td>Basic Electrical Engineering</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 1</td><td>Programming for Problem Solving</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 1</td><td>Communication Skills</td><td><button class="download-btn">Download</button></td></tr>
+
+        <!-- Semester 2 -->
+        <tr><td>Semester 2</td><td>Mathematics-II</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 2</td><td>Chemistry</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 2</td><td>Engineering Mechanics</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 2</td><td>Data Structures</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 2</td><td>Environmental Science</td><td><button class="download-btn">Download</button></td></tr>
+
+        <!-- Semester 3 -->
+        <tr><td>Semester 3</td><td>Discrete Mathematics</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 3</td><td>Computer Organization</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 3</td><td>Object-Oriented Programming</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 3</td><td>Digital Logic Design</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 3</td><td>Operating Systems</td><td><button class="download-btn">Download</button></td></tr>
+
+        <!-- Semester 4 -->
+        <tr><td>Semester 4</td><td>Database Management Systems</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 4</td><td>Design & Analysis of Algorithms</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 4</td><td>Theory of Computation</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 4</td><td>Computer Networks</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 4</td><td>Software Engineering</td><td><button class="download-btn">Download</button></td></tr>
+
+        <!-- Semester 5 -->
+        <tr><td>Semester 5</td><td>Compiler Design</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 5</td><td>Web Technologies</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 5</td><td>Machine Learning</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 5</td><td>Artificial Intelligence</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 5</td><td>Information Security</td><td><button class="download-btn">Download</button></td></tr>
+
+        <!-- Semester 6 -->
+        <tr><td>Semester 6</td><td>Cloud Computing</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 6</td><td>Data Mining</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 6</td><td>Big Data Analytics</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 6</td><td>Internet of Things</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 6</td><td>Mobile App Development</td><td><button class="download-btn">Download</button></td></tr>
+
+        <!-- Semester 7 -->
+        <tr><td>Semester 7</td><td>Blockchain Technology</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 7</td><td>Augmented & Virtual Reality</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 7</td><td>Cybersecurity</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 7</td><td>Software Project Management</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 7</td><td>Elective I</td><td><button class="download-btn">Download</button></td></tr>
+
+        <!-- Semester 8 -->
+        <tr><td>Semester 8</td><td>Deep Learning</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 8</td><td>Natural Language Processing</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 8</td><td>DevOps</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 8</td><td>Major Project</td><td><button class="download-btn">Download</button></td></tr>
+        <tr><td>Semester 8</td><td>Elective II</td><td><button class="download-btn">Download</button></td></tr>
+    </tbody>
+    </table>
+</main>
+
+<footer>
+    <hr>
+    <p>Made with ❤️ by Vashishth Singoria | ©️ 2025 Student Hub</p>
+</footer>
+
+<script>
+    function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    }
+
+    function filterTable() {
+    const input = document.getElementById("searchInput").value.toUpperCase();
+    const rows = document.getElementById("pyqTable").getElementsByTagName("tr");
+    for (let i = 1; i < rows.length; i++) {
+        const semester = rows[i].getElementsByTagName("td")[0];
+        const subject = rows[i].getElementsByTagName("td")[1];
+        if (semester && subject) {
+        const text = semester.textContent + " " + subject.textContent;
+        rows[i].style.display = text.toUpperCase().includes(input) ? "" : "none";
+        }
+    }
+    }
+</script>
+</body>
+</html>

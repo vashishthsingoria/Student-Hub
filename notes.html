@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="style2.css" />
+<title>Notes - Student Hub</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    }
+    details {
+    margin-bottom: 12px;
+    }
+    summary {
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    }
+    ul {
+    margin-left: 20px;
+    }
+    header, footer {
+    text-align: center;
+    }
+    nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>📘 Semester-wise Notes</h1>
+    <nav>
+    <a href="index.html">Home</a> |
+    <a href="signup.html">Sign Up</a> |
+    <a href="pyqs.html">PYQs</a> |
+    <a href="pyps.html">PYPS</a> |
+    <a href="resources.html">Study Resources</a>
+    </nav>
+    <hr>
+</header>
+<main>
+    <input
+    type="text"
+    id="search"
+    placeholder="Search any subject, unit or semester..."
+    onkeyup="searchNotes()"
+    style="padding: 10px; width: 100%; margin-bottom: 20px; font-size: 16px;"
+>
+    <script>
+        function searchNotes() {
+        const input = document.getElementById("search").value.toLowerCase();
+        const semesters = document.querySelectorAll("main > details");
+    
+        semesters.forEach(sem => {
+            let matchFound = false;
+    
+            // Check semester summary
+            const semSummary = sem.querySelector("summary");
+            if (semSummary && semSummary.textContent.toLowerCase().includes(input)) {
+            matchFound = true;
+            }
+    
+            // Check all subjects and units inside semester
+            const nestedText = sem.innerText.toLowerCase();
+            if (nestedText.includes(input)) {
+            matchFound = true;
+            }
+    
+            // Show or hide the whole semester block
+            sem.style.display = matchFound ? "block" : "none";
+        });
+        }
+    </script>
+    <h2>📚 Notes by Semester > Subject > Unit</h2>
+
+    <!-- SEMESTER 1 -->
+    <details><summary>Semester 1</summary>
+    <details><summary>Mathematics I</summary>
+        <ul>
+        <li><a href="notes/unit1.pdf">Unit 1</a></li>
+        <li><a href="">Unit 2</a></li>
+        <li><a href="#">Unit 3</a></li>
+        <li><a href="#">Unit 4</a></li>
+        <li><a href="#">Unit 5</a></li>
+        </ul>
+    </details>
+    <details><summary>Applied Physics</summary>
+        <ul>
+        <li><a href="#">Unit 1</a></li>
+        <li><a href="#">Unit 2</a></li>
+        <li><a href="#">Unit 3</a></li>
+        <li><a href="#">Unit 4</a></li>
+        <li><a href="#">Unit 5</a></li>
+        </ul>
+    </details>
+    <details><summary>Basic Electrical Engineering</summary>
+        <ul>
+        <li><a href="#">Unit 1</a></li>
+        <li><a href="#">Unit 2</a></li>
+        <li><a href="#">Unit 3</a></li>
+        <li><a href="#">Unit 4</a></li>
+        <li><a href="#">Unit 5</a></li>
+        </ul>
+    </details>
+    <details><summary>Programming for Problem Solving</summary>
+        <ul>
+        <li><a href="#">Unit 1</a></li>
+        <li><a href="#">Unit 2</a></li>
+        <li><a href="#">Unit 3</a></li>
+        <li><a href="#">Unit 4</a></li>
+        <li><a href="#">Unit 5</a></li>
+        </ul>
+    </details>
+    <details><summary>Engineering Graphics & Design</summary>
+        <ul>
+        <li><a href="#">Unit 1</a></li>
+        <li><a href="#">Unit 2</a></li>
+        <li><a href="#">Unit 3</a></li>
+        <li><a href="#">Unit 4</a></li>
+        <li><a href="#">Unit 5</a></li>
+        </ul>
+    </details>
+    </details>
+
+    <!-- SEMESTER 2 -->
+    <details><summary>Semester 2</summary>
+    <details><summary>Mathematics II</summary> 
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Engineering Chemistry</summary> 
+        <ul>
+        <li><a href="#">Unit 1</a></li>
+        <li><a href="#">Unit 2</a></li>
+        <li><a href="#">Unit 3</a></li>
+        <li><a href="#">Unit 4</a></li>
+        <li><a href="#">Unit 5</a></li>
+        </ul>
+    </details>
+    <details><summary>Basic Electronics</summary> 
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Data Structures</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Communication Skills</summary> 
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    </details>
+
+    <!-- SEMESTER 3 -->
+    <details><summary>Semester 3</summary>
+    <details><summary>Discrete Mathematics</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Object Oriented Programming using C++</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Computer Organization & Architecture</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Digital Logic Design</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Environmental Science</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    </details>
+
+    <!-- SEMESTER 4 -->
+    <details><summary>Semester 4</summary>
+    <details><summary>Design and Analysis of Algorithms</summary>
+        <ul>
+        <li><a href="#">Unit 1</a></li>
+        <li><a href="#">Unit 2</a></li>
+        <li><a href="#">Unit 3</a></li>
+        <li><a href="#">Unit 4</a></li>
+        <li><a href="#">Unit 5</a></li>
+        </ul>
+    </details>
+    <details><summary>Operating Systems</summary>
+        <ul>
+        <li><a href="#">Unit 1</a></li>
+        <li><a href="#">Unit 2</a></li>
+        <li><a href="#">Unit 3</a></li>
+        <li><a href="#">Unit 4</a></li>
+        <li><a href="#">Unit 5</a></li>
+        </ul>
+    </details>
+    <details><summary>Database Management Systems</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Software Engineering</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Professional Ethics & Values</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    </details>
+
+    <!-- SEMESTER 5 -->
+    <details><summary>Semester 5</summary>
+    <details><summary>Computer Networks</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Theory of Computation</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Web Technologies</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Artificial Intelligence</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Compiler Design</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    </details>
+
+    <!-- SEMESTER 6 -->
+    <details><summary>Semester 6</summary>
+    <details><summary>Machine Learning</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Information Security</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Cloud Computing</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Mobile App Development</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Open Elective I</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    </details>
+
+    <!-- SEMESTER 7 -->
+    <details><summary>Semester 7</summary>
+    <details><summary>Big Data Analytics</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Internet of Things</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Natural Language Processing</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Departmental Elective I</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Minor Project</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    </details>
+
+    <!-- SEMESTER 8 -->
+    <details><summary>Semester 8</summary>
+    <details><summary>Blockchain Technology</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Cyber Law & Ethics</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Departmental Elective II</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Major Project</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    <details><summary>Seminar & Internship</summary>
+        <ul>
+            <li><a href="#">Unit 1</a></li>
+            <li><a href="#">Unit 2</a></li>
+            <li><a href="#">Unit 3</a></li>
+            <li><a href="#">Unit 4</a></li>
+            <li><a href="#">Unit 5</a></li>
+            </ul>
+        </details>
+    </details>
+</main>
+<footer>
+    <hr>
+    <p>Made with ❤️ by Vashishth Singoria | ©️ 2025 Student Hub</p>
+</footer>
+</body>
+</html>
